@@ -1,0 +1,54 @@
+{
+  "name": "belajar-logging",
+  "version": "1.0.0",
+  "description": "belajar menggunakan logging",
+  "keywords": [
+    "belajar",
+    "logging",
+    "node.js",
+    "npm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FATAH1804dev"
+  },
+  "license": "ISC",
+  "author": "fathahillah ath thariq",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "test/**/*.{js,jsx}",
+      "!node_modules/**/*.{js,jsx}",
+      "!vendor/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 70
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "babel-jest": "^30.4.1",
+    "jest": "^30.4.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^8.0.0",
+    "winston": "3.19.0",
+    "winston-daily-rotate-file": "5.0.0"
+  }
+}
